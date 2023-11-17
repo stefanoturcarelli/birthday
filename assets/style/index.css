@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+a,
+i,
+figure,
+img,
+button,
+input[type="button"],
+input[type="submit"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+  border-style: none;
+  outline-style: none;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+a {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: min(100% - 25px, 1080px);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* ! ------------------------------------------------------------------------ */
+/* !                                 CONTENT                                  */
+/* ! ------------------------------------------------------------------------ */
+
+body {
+  background-image: url(../img/background.png);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 35%;
+  background-repeat: no-repeat;
+}
+
+.flex-container {
+  padding-top: 10rem;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+	width: 100%;
+}
+
+#output {
+  border-radius: 2rem;
+  background-color: aliceblue;
+  height: 30rem;
+  width: 30rem;
+	text-align: center;
+}
+
+#output p {
+  padding: 2rem;
+}
+
+#check-btn {
+  display: inline-block;
+  background-color: beige;
+  border: transparent 0.1rem solid;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+
+input {
+  padding: 1rem;
+  border-radius: 2rem;
+	text-align: center;
+}
+
+h1 {
+	font-size: 4rem;
+}
